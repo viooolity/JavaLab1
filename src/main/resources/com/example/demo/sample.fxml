@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/19.0.2" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.Controller">
+    <children>
+        <LineChart fx:id="chart">
+            <xAxis>
+                <NumberAxis label="X" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Y" />
+            </yAxis>
+        </LineChart>
+      <VBox prefHeight="78.0" prefWidth="20.0">
+         <children>
+            <HBox prefHeight="39.0" prefWidth="329.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="min">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField text="-10" fx:id="minTextField">
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                    <CheckBox fx:id="function1Checkbox" onAction="#onFunction1Selected" text="Function 1">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </CheckBox>
+                    <CheckBox fx:id="function2Checkbox" onAction="#onFunction2Selected" text="Function 2">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </CheckBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="max">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField text="10" fx:id="maxTextField" />
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Шаг">
+                           <HBox.margin>
+                              <Insets right="5.0" top="3.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField text="0.1" fx:id="stepTextField"/>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+    </children>
+</VBox>
